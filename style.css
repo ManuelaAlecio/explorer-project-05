@@ -40,6 +40,8 @@ header {
   margin: 10rem 0 8rem;
 
   text-align: center;
+
+  animation: topdown 900ms;
 }
 
 header p {
@@ -77,6 +79,29 @@ main {
   object-fit: cover;
 
   border-radius: 6px;
+
+  transition: all 200ms;
+}
+
+.div1 {
+  animation: downtop 900ms 100ms backwards;
+}
+
+.div2 {
+  animation: downtop 900ms 200ms backwards;
+}
+
+.div3 {
+  animation: downtop 900ms 300ms backwards;
+}
+
+.div4 {
+  animation: downtop 900ms 400ms backwards;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
 }
 
 .card h2 {
@@ -110,4 +135,27 @@ main {
 
   width: fit-content;
   height: 3.8rem;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
